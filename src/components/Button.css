@@ -1,0 +1,17 @@
+a {
+  text-decoration: none;
+}
+
+.container-button {
+  border-radius: 2px;
+  background: var(--primary-lime-green-04, #5cb85f);
+  padding: 8px 12px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: Arial;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 142.857% */
+}
