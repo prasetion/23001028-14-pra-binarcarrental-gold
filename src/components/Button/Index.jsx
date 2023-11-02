@@ -1,5 +1,4 @@
-import React from "react";
-import "./Button.css";
+import "./Style.css";
 
 const Button = ({ name, callback }) => {
   return (
