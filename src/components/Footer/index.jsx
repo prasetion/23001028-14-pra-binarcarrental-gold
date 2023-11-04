@@ -8,7 +8,7 @@ import Logo from "../Logo";
 
 const Footer = () => {
   return (
-    <div className="footer-container">
+    <div className="footer-container container-section">
       <div className="footer-container-vertical footer-container-child">
         {footerAddress.map((item, index) => (
           <div key={index} className="footer-bold">
