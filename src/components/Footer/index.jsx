@@ -24,7 +24,7 @@ const Footer = () => {
         <div className="footer-bold">Connect with us</div>
         <div className="footer-icon">
           {footerIcons.map((item) => (
-            <div key={item.key}>{item}</div>
+            <img src={item} key={item.key}></img>
           ))}
         </div>
       </div>

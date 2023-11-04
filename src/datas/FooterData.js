@@ -11,4 +11,10 @@ export const footerNavigation = [
   "FAQ",
 ];
 
-export const footerIcons = ["ig", "fb", "twitter", "mail", "twitch"];
+export const footerIcons = [
+  "../../src/assets/images/icon_facebook.png",
+  "../../src/assets/images/icon_instagram.png",
+  "../../src/assets/images/icon_twitter.png",
+  "../../src/assets/images/icon_mail.png",
+  "../../src/assets/images/icon_twitch.png",
+];
