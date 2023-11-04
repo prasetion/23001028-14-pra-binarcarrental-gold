@@ -1,13 +1,10 @@
-import Button from "./components/Button/Index";
+// import Button from "./components/Button/Index";
+import LandingPage from "./pages/LandingPage";
 
 const App = () => {
-  const testClick = () => {
-    console.log("test");
-  };
-
   return (
     <div>
-      <Button name={"test"} callback={testClick()}></Button>
+      <LandingPage></LandingPage>
     </div>
   );
 };
