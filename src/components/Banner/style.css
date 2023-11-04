@@ -1,5 +1,5 @@
 .banner-container {
-  width: 1168px;
+  max-width: 1168px;
   border-radius: 13px;
   background: var(--primary-dark-blue-04, #0d28a6);
   color: #fff;
@@ -8,20 +8,39 @@
   font-weight: 700;
   text-align: center;
   margin: auto auto 100px auto;
+  display: flex;
+  flex-direction: column;
+  padding: 64px 0;
+  gap: 52px;
+}
+
+.banner-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .banner-title {
   font-size: 36px;
-  padding: 64px 0 16px 0;
 }
 
 .banner-description {
   font-size: 14px;
-  padding-bottom: 52px;
   width: 468px;
   margin: auto;
 }
 
 .banner-button {
   padding-bottom: 64px;
+}
+
+@media screen and (max-width: 360px) {
+  .banner-container {
+    margin: auto 16px 40px 16px;
+  }
+  .banner-description {
+    font-size: 14px;
+    width: 212px;
+    margin: auto;
+  }
 }
