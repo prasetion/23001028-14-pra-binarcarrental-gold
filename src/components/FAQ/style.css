@@ -30,3 +30,17 @@
   flex-direction: column;
   width: 668px;
 }
+
+@media screen and (max-width: 360px) {
+  .faq-container {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .faq-container-right {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    width: 100%;
+  }
+}
