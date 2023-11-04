@@ -2,10 +2,10 @@ import "./style.css";
 
 const WhyUsCard = (props) => {
   return (
-    <div>
-      <h1>{props.data.title}</h1>
-      {/* <div>{data.title}</div>
-      <p>{data.desc}</p> */}
+    <div className="whyus-card">
+      <img src={props.data.icon} alt={props.data.title} />
+      <div className="whyus-card-title">{props.data.title}</div>
+      <p>{props.data.desc}</p>
     </div>
   );
 };

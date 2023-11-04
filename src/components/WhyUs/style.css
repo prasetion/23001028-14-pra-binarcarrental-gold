@@ -17,13 +17,13 @@
   font-style: normal;
   font-weight: 700;
   line-height: 36px;
+  padding-bottom: 16px;
 }
 
-.whyus-card-title {
-}
-
-.whyus-card {
-  width: auto;
+.whyus-card-container {
+  width: 100%;
   display: flex;
   justify-content: space-between;
+  gap: 32px;
+  padding-top: 16px;
 }
