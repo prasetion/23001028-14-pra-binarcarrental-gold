@@ -1,0 +1,29 @@
+.whyus-container {
+  max-width: 1168px;
+  margin: auto;
+}
+
+.whyus-container p {
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.whyus-header {
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  padding-bottom: 16px;
+}
+
+.whyus-card-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  padding-top: 16px;
+}
