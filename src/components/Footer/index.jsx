@@ -4,6 +4,7 @@ import {
   footerNavigation,
   footerIcons,
 } from "../../datas/FooterData";
+import Logo from "../Logo";
 
 const Footer = () => {
   return (
@@ -30,7 +31,7 @@ const Footer = () => {
       </div>
       <div className="footer-container-vertical footer-container-child">
         <div className="footer-bold">Copyright Binar 2022</div>
-        <div>image</div>
+        <Logo />
       </div>
     </div>
   );
