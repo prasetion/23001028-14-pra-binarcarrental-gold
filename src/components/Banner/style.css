@@ -1,0 +1,27 @@
+.banner-container {
+  width: 1168px;
+  border-radius: 13px;
+  background: var(--primary-dark-blue-04, #0d28a6);
+  color: #fff;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: 700;
+  text-align: center;
+  margin: auto auto 100px auto;
+}
+
+.banner-title {
+  font-size: 36px;
+  padding: 64px 0 16px 0;
+}
+
+.banner-description {
+  font-size: 14px;
+  padding-bottom: 52px;
+  width: 468px;
+  margin: auto;
+}
+
+.banner-button {
+  padding-bottom: 64px;
+}
