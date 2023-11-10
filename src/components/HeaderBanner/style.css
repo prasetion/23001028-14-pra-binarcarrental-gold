@@ -1,0 +1,28 @@
+.header-banner-container {
+  display: flex;
+  justify-content: space-between;
+  width: 1440px;
+  margin: auto;
+  color: #000;
+  font-style: normal;
+  font-weight: 700;
+  gap: 32px;
+  align-items: center;
+  padding-top: 38px;
+}
+
+.header-banner-container p {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.header-banner-container-left {
+  display: flex;
+  flex-direction: column;
+  padding-left: 136px;
+}
+
+.header-banner-title {
+  font-size: 36px;
+  line-height: 150%;
+}

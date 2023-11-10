@@ -9,7 +9,7 @@ import Header from "../../components/Header";
 const LandingPage = () => {
   return (
     <div>
-      <Header />
+      <Header hasBanner={true} />
       <OurServices />
       <WhyUs />
       <Banner />
