@@ -1,0 +1,18 @@
+.navbar-container {
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  width: 1055px;
+}
+
+.navbar-menu {
+  display: flex;
+  color: #000;
+  font-family: Arial;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  gap: 32px;
+}
