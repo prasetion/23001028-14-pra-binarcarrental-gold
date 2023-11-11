@@ -20,6 +20,7 @@
   display: flex;
   flex-direction: column;
   padding-left: 136px;
+  gap: 16px;
 }
 
 .header-banner-title {
