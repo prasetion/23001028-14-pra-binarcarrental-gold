@@ -1,0 +1,28 @@
+.testimony-container {
+  width: 1440px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  color: #000;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.testimony-container p {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.testimony-container-title {
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.testimony-container-top {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  gap: 16px;
+}
