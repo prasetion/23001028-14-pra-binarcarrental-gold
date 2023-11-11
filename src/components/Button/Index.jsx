@@ -1,11 +1,12 @@
 import "./style.css";
+import { Link } from "react-router-dom";
 
-const Button = ({ name, callback }) => {
+const Button = ({ name, to }) => {
   return (
     <div>
-      <a onClick={callback} className="container-button">
+      <Link to={to} className="container-button">
         {name}
-      </a>
+      </Link>
     </div>
   );
 };
