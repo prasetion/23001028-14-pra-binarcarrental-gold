@@ -21,6 +21,13 @@ const DetailCarPage = () => {
       })
       .catch((err) => console.log(err));
   };
+
+  const getCategory = (category) => {
+    if (category === "small") return "2 - 3 Orang";
+    if (category === "medium") return "4 - 5 Orang";
+    if (category === "large") return "6 - 8 Orang";
+  };
+
   return (
     <div>
       <Header hasBanner={true} />
@@ -32,7 +39,7 @@ const DetailCarPage = () => {
           <img src={carData.image} className="detail-car-image" />
           <div className="detail-car-info">
             <p>{carData.name}</p>
-            <div>
+            <div className="detail-car-category">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="12"
@@ -65,11 +72,13 @@ const DetailCarPage = () => {
                   stroke-linejoin="round"
                 />
               </svg>
-              {carData.category}
+              <div>{getCategory(carData.category)}</div>
             </div>
           </div>
-          <div></div>
-          <h1>{carData.price}</h1>
+          <div className="detail-car-price">
+            <p>Total</p>
+            <p>{carData.price}</p>
+          </div>
         </div>
       </div>
       <Footer />
