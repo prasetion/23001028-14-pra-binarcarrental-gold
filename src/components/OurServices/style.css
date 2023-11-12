@@ -21,11 +21,6 @@
   padding-bottom: 24px;
 }
 
-.our-service-container-right p {
-  font-size: 14px;
-  line-height: 20px;
-}
-
 .our-service-desc {
   padding-bottom: 16px;
 }
@@ -33,6 +28,7 @@
 .our-service-list-container {
   display: flex;
   flex-direction: column;
+  gap: 16px;
 }
 
 .our-service-list {

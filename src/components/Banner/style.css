@@ -34,7 +34,7 @@
   padding-bottom: 64px;
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 600px) {
   .banner-container {
     margin: auto 16px 40px 16px;
   }
