@@ -31,9 +31,54 @@ const DetailCarPage = () => {
   return (
     <div>
       <Header hasBanner={true} />
-      <div className="detail-car-container ">
-        <div className="detail-car-container-border">
-          <h1>left</h1>
+      <div className="detail-car-container">
+        <div className="detail-car-container-border detail-car-container-left">
+          <p className="pb-3">Tentang Paket</p>
+          <div>
+            <p className="pb-2">Include</p>
+            <ul>
+              <li>
+                Apa saja yang termasuk dalam paket misal durasi max 12 jam
+              </li>
+              <li>Sudah termasuk bensin selama 12 jam</li>
+              <li>Sudah termasuk Tiket Wisata</li>
+              <li>Sudah termasuk pajak</li>
+            </ul>
+          </div>
+          <div>
+            <p className="pb-2">Exclude</p>
+            <ul>
+              <li>Tidak termasuk biaya makan sopir Rp 75.000/hari</li>
+              <li>
+                Jika overtime lebih dari 12 jam akan ada tambahan biaya Rp
+                20.000/jam
+              </li>
+              <li>Tidak termasuk akomodasi penginapan</li>
+            </ul>
+          </div>
+          <div>
+            <p className="pb-2">Refund, Reschedule, Overtime</p>
+            <ul>
+              <li>Tidak termasuk biaya makan sopir Rp 75.000/hari</li>
+              <li>
+                Jika overtime lebih dari 12 jam akan ada tambahan biaya Rp
+                20.000/jam
+              </li>
+              <li>Tidak termasuk akomodasi penginapan</li>
+              <li>Tidak termasuk biaya makan sopir Rp 75.000/hari</li>
+              <li>
+                Jika overtime lebih dari 12 jam akan ada tambahan biaya Rp
+                20.000/jam
+              </li>
+              <li>Tidak termasuk akomodasi penginapan</li>
+              <li>Tidak termasuk biaya makan sopir Rp 75.000/hari</li>
+              <li>
+                Jika overtime lebih dari 12 jam akan ada tambahan biaya Rp
+                20.000/jam
+              </li>
+              <li>Tidak termasuk akomodasi penginapan</li>
+            </ul>
+          </div>
         </div>
         <div className="detail-car-container-border detail-car-container-right">
           <img src={carData.image} className="detail-car-image" />

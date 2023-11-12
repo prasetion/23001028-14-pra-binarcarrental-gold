@@ -3,17 +3,30 @@
   gap: 32px;
   width: 1047px;
   margin: auto;
+  padding-bottom: 152px;
 }
 
 .detail-car-container-left {
   width: 605px;
+  padding: 24px;
+}
+
+.detail-car-container-left li {
+  color: var(--neutral-03, #8a8a8a);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 175%;
 }
 
 .detail-car-container-right {
   width: 405px;
   display: flex;
   flex-direction: column;
+  justify-content: start;
   padding: 24px;
+  /* height: 100vh; */
+  margin-bottom: 180px;
 }
 
 .detail-car-image {
