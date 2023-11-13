@@ -1,7 +1,7 @@
 .header-banner-container {
   display: flex;
   justify-content: space-between;
-  width: 1440px;
+  max-width: 1440px;
   margin: auto;
   color: #000;
   font-style: normal;
@@ -21,4 +21,19 @@
 .header-banner-title {
   font-size: 36px;
   line-height: 150%;
+}
+
+@media screen and (max-width: 600px) {
+  .header-banner-container {
+    flex-direction: column;
+    padding: 24px;
+  }
+
+  .header-banner-container-left {
+    padding-left: 0;
+  }
+
+  .header-banner-container img {
+    width: 100%;
+  }
 }
