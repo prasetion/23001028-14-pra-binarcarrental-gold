@@ -1,4 +1,5 @@
 import "./style.css";
+import Carousel from "../Carousel";
 
 const Testimony = () => {
   return (
@@ -7,7 +8,9 @@ const Testimony = () => {
         <div className="testimony-container-title">Testimonial</div>
         <p>Berbagai review positif dari para pelanggan kami</p>
       </div>
-      <div>carousel belum</div>
+      <div>
+        <Carousel></Carousel>
+      </div>
     </div>
   );
 };
