@@ -3,14 +3,6 @@
   margin: auto;
 }
 
-.whyus-container p {
-  color: #000;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 20px;
-}
-
 .whyus-header {
   color: #000;
   font-size: 24px;
@@ -28,7 +20,7 @@
   padding-top: 16px;
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 600px) {
   .whyus-card-container {
     gap: 16px;
     flex-direction: column;
