@@ -4,10 +4,12 @@ import Header from "../../components/Header";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import CarCard from "../../components/CarCard";
+import DetailCar from "../../components/DetailCar";
 
 const SearchCarPage = () => {
   const [carsData, setCarsData] = useState([]);
   const [carDetailData, setCarDetailData] = useState({});
+  const [carId, setCarId] = useState("");
   const [carName, setCarName] = useState("");
   const [carCategory, setCarCategory] = useState("");
   const [carIsRented, setCarIsRented] = useState("");
@@ -18,6 +20,7 @@ const SearchCarPage = () => {
 
   useEffect(() => {
     handleGetCars(carName, carCategory, carIsRented, carMinPrice, carMaxPrice);
+    handleSelectCar(carId);
   }, []);
 
   const handleGetCars = (name, category, isRented, minPrice, maxPrice) => {
@@ -32,11 +35,6 @@ const SearchCarPage = () => {
       .catch((err) => console.log(err));
   };
 
-  // const handleSelectCar = (e) => {
-  //   console.log(e.target.value);
-  //   console.log(`https://api-car-rental.binaracademy.org/customer/car/${id}`);
-  // };
-
   const handleSelectCar = (id) => {
     axios
       .get(`https://api-car-rental.binaracademy.org/customer/car/${id}`)
@@ -45,6 +43,20 @@ const SearchCarPage = () => {
         setCarDetailData(res.data);
       })
       .catch((err) => console.log(err));
+  };
+
+  const handleReset = () => {
+    setCarName("");
+    setCarCategory("");
+    setCarIsRented("");
+    setHasDetail(false);
+    handleGetCars("", "", "", "", "");
+    setIsSearch(false);
+  };
+
+  const handleFindCars = () => {
+    setIsSearch(true);
+    handleGetCars("", "", "", "", "");
   };
 
   return (
@@ -74,18 +86,37 @@ const SearchCarPage = () => {
           <option value="true">Disewakan</option>
           <option value="false">Tersewa</option>
         </select>
+        {isSearch ? (
+          <button onClick={handleReset}> Reset</button>
+        ) : (
+          <button onClick={handleFindCars}> Cari Mobil</button>
+        )}
       </div>
-      <div className="card-list-container">
-        {carsData.map((car, index) => (
-          <CarCard
-            key={index}
-            title={car.name}
-            image={car.image}
-            price={car.price}
-            buttonCallback={(e) => handleSelectCar(car.id)}
-          ></CarCard>
-        ))}
-      </div>
+      {hasDetail ? (
+        <DetailCar
+          name={carDetailData.name}
+          image={carDetailData.image}
+          category={carDetailData.category}
+          price={carDetailData.price}
+        />
+      ) : (
+        <div className="card-list-container">
+          {carsData.map((car, index) => (
+            <CarCard
+              key={index}
+              title={car.name}
+              image={car.image}
+              price={car.price}
+              buttonCallback={(e) => {
+                setCarId(car.id);
+                handleSelectCar(car.id);
+                setHasDetail(true);
+              }}
+            ></CarCard>
+          ))}
+        </div>
+      )}
+
       <Footer />
     </div>
   );
