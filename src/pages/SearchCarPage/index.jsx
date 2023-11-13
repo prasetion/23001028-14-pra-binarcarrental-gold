@@ -56,7 +56,11 @@ const SearchCarPage = () => {
 
   const handleFindCars = () => {
     setIsSearch(true);
-    handleGetCars("", "", "", "", "");
+    handleGetCars(carName, "", "", "", "");
+  };
+
+  const getCarNameInput = (e) => {
+    setCarName(e.target.value);
   };
 
   return (
@@ -65,7 +69,7 @@ const SearchCarPage = () => {
       <div className="search-section mb-5">
         <div className="search-section-input">
           <label>Nama Mobil</label>
-          <input type="text" />
+          <input type="text" value={carName} onChange={getCarNameInput} />
         </div>
         <div className="search-section-input">
           <label>Kategori</label>
