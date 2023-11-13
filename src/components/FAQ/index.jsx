@@ -4,7 +4,7 @@ import { faqData } from "../../datas/FAQData";
 
 const FAQ = () => {
   return (
-    <div className="faq-container container-section">
+    <div id="faq" className="faq-container container-section">
       <div className="faq-container-left">
         <div className="faq-container-title">Frequently Asked Question</div>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
