@@ -56,7 +56,7 @@ const SearchCarPage = () => {
 
   const handleFindCars = () => {
     setIsSearch(true);
-    handleGetCars(carName, carCategory, "", "", "");
+    handleGetCars(carName, carCategory, carIsRented, carPrice);
   };
 
   const getCarNameInput = (e) => {
@@ -69,6 +69,10 @@ const SearchCarPage = () => {
 
   const getCarPriceInput = (e) => {
     setCarPrice(e.target.value);
+  };
+
+  const getCarStatusInput = (e) => {
+    setCarIsRented(e.target.value);
   };
 
   return (
@@ -105,7 +109,7 @@ const SearchCarPage = () => {
         </div>
         <div className="search-section-input">
           <label>Status</label>
-          <select value={carIsRented}>
+          <select value={carIsRented} onChange={getCarStatusInput}>
             <option value="">-</option>
             <option value="true">Disewakan</option>
             <option value="false">Tersewa</option>
