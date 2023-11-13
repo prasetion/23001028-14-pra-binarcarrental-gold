@@ -13,20 +13,19 @@ const SearchCarPage = () => {
   const [carName, setCarName] = useState("");
   const [carCategory, setCarCategory] = useState("");
   const [carIsRented, setCarIsRented] = useState("");
-  const [carMinPrice, setCarMinPrice] = useState("");
-  const [carMaxPrice, setCarMaxPrice] = useState("");
+  const [carPrice, setCarPrice] = useState("");
   const [isSearch, setIsSearch] = useState(false);
   const [hasDetail, setHasDetail] = useState(false);
 
   useEffect(() => {
-    handleGetCars(carName, carCategory, carIsRented, carMinPrice, carMaxPrice);
+    handleGetCars(carName, carCategory, carIsRented, carPrice);
     handleSelectCar(carId);
   }, []);
 
-  const handleGetCars = (name, category, isRented, minPrice, maxPrice) => {
+  const handleGetCars = (name, category, isRented, price) => {
     axios
       .get(
-        `https://api-car-rental.binaracademy.org/customer/v2/car?name=${name}&category=${category}&isRented=${isRented}&minPrice=${minPrice}&maxPrice=${maxPrice}&page=1&pageSize=10`
+        `https://api-car-rental.binaracademy.org/customer/v2/car?name=${name}&category=${category}&isRented=${isRented}&${price}&page=1&pageSize=10`
       )
       .then((res) => {
         console.log(res.data.cars);
@@ -49,6 +48,7 @@ const SearchCarPage = () => {
     setCarName("");
     setCarCategory("");
     setCarIsRented("");
+    setCarPrice("");
     setHasDetail(false);
     handleGetCars("", "", "", "", "");
     setIsSearch(false);
@@ -65,6 +65,10 @@ const SearchCarPage = () => {
 
   const getCarCategoryInput = (e) => {
     setCarCategory(e.target.value);
+  };
+
+  const getCarPriceInput = (e) => {
+    setCarPrice(e.target.value);
   };
 
   return (
@@ -86,16 +90,22 @@ const SearchCarPage = () => {
         </div>
         <div className="search-section-input">
           <label>Harga</label>
-          <select>
+          <select value={carPrice} onChange={getCarPriceInput}>
             <option value="">-</option>
-            <option value="beverage">small</option>
-            <option value="main-dish">medium</option>
-            <option value="main-dish">large</option>
+            <option value="minPrice=0&maxPrice=250000">
+              Rp. 0 - Rp. 250.000
+            </option>
+            <option value="minPrice=250000&maxPrice=400000">
+              Rp. 250.000 - Rp. 400.000
+            </option>
+            <option value="minPrice=400000&maxPrice=600000">
+              Rp. 400.000 - Rp. 600.000
+            </option>
           </select>
         </div>
         <div className="search-section-input">
           <label>Status</label>
-          <select>
+          <select value={carIsRented}>
             <option value="">-</option>
             <option value="true">Disewakan</option>
             <option value="false">Tersewa</option>
