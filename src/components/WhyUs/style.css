@@ -24,5 +24,10 @@
   .whyus-card-container {
     gap: 16px;
     flex-direction: column;
+    margin: auto;
+  }
+
+  .whyus-container {
+    width: 100%;
   }
 }

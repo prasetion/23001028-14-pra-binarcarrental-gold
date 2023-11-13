@@ -5,15 +5,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
-    <div>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<LandingPage />}></Route>
-          <Route path="/search-car" element={<SearchCarPage />}></Route>
-          <Route path="/search-car/:id" element={<DetailCarPage />}></Route>
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandingPage />}></Route>
+        <Route path="/search-car" element={<SearchCarPage />}></Route>
+        <Route path="/search-car/:id" element={<DetailCarPage />}></Route>
+        {/* // untuk detail car page bisa diakses tersendiri di halaman terpisah sesuai id, namun better, suggestion dari saya untuk  flow nya dijadikan satu dengan search car page untuk ux agar lebih baik*/}
+      </Routes>
+    </BrowserRouter>
   );
 };
 
