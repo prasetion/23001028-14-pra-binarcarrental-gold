@@ -56,11 +56,15 @@ const SearchCarPage = () => {
 
   const handleFindCars = () => {
     setIsSearch(true);
-    handleGetCars(carName, "", "", "", "");
+    handleGetCars(carName, carCategory, "", "", "");
   };
 
   const getCarNameInput = (e) => {
     setCarName(e.target.value);
+  };
+
+  const getCarCategoryInput = (e) => {
+    setCarCategory(e.target.value);
   };
 
   return (
@@ -73,11 +77,11 @@ const SearchCarPage = () => {
         </div>
         <div className="search-section-input">
           <label>Kategori</label>
-          <select>
+          <select value={carCategory} onChange={getCarCategoryInput}>
             <option value="">-</option>
-            <option value="small">small</option>
-            <option value="medium">medium</option>
-            <option value="large">large</option>
+            <option value="small">2-3 orang</option>
+            <option value="medium">4-5 orang</option>
+            <option value="large">6-8 orang</option>
           </select>
         </div>
         <div className="search-section-input">
@@ -110,7 +114,7 @@ const SearchCarPage = () => {
           category={carDetailData.category}
           price={carDetailData.price}
         />
-      ) : (
+      ) : carsData.length > 0 ? (
         <div className="card-list-container">
           {carsData.map((car, index) => (
             <CarCard
@@ -126,8 +130,9 @@ const SearchCarPage = () => {
             ></CarCard>
           ))}
         </div>
+      ) : (
+        <h2 className="car-not-found">Mobil tidak ditemukan</h2>
       )}
-
       <Footer />
     </div>
   );

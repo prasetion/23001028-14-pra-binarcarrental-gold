@@ -52,3 +52,9 @@ select {
   font-weight: 700;
   line-height: 20px;
 }
+
+.car-not-found {
+  text-align: center;
+  width: 100%;
+  padding-bottom: 50px;
+}
