@@ -12,7 +12,7 @@ const OurServices = () => {
   ];
 
   return (
-    <div className="our-service-container container-section">
+    <div id="our-service" className="our-service-container container-section">
       <img src={imgService} alt="" />
       <div className="our-service-container-right">
         <div className="our-service-title">

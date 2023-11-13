@@ -1,6 +1,6 @@
 .our-service-container {
   display: flex;
-  width: 1027px;
+  max-width: 1027px;
   color: #000;
   font-family: Arial;
   font-style: normal;
@@ -12,7 +12,7 @@
 .our-service-container-right {
   display: flex;
   flex-direction: column;
-  width: 468px;
+  max-width: 468px;
 }
 
 .our-service-title {
@@ -39,4 +39,10 @@
 .our-service-list img {
   width: 24px;
   height: fit-content;
+}
+
+@media screen and (max-width: 600px) {
+  .our-service-container {
+    flex-direction: column;
+  }
 }

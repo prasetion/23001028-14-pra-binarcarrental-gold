@@ -9,7 +9,7 @@ import Testimony from "../../components/Testimony";
 
 const LandingPage = () => {
   return (
-    <div>
+    <div className="landing-page-container">
       <Header hasBanner={true} />
       <OurServices />
       <WhyUs />
