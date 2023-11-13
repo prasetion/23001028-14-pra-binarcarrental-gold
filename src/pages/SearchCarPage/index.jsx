@@ -86,7 +86,7 @@ const SearchCarPage = () => {
           <option value="true">Disewakan</option>
           <option value="false">Tersewa</option>
         </select>
-        {isSearch ? (
+        {isSearch || hasDetail ? (
           <button onClick={handleReset}> Reset</button>
         ) : (
           <button onClick={handleFindCars}> Cari Mobil</button>
