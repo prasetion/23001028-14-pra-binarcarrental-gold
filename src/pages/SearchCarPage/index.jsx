@@ -62,30 +62,37 @@ const SearchCarPage = () => {
   return (
     <div>
       <Header hasBanner={true} />
-      <div className="search-section">
-        <label>nama mobil</label>
-        <input type="text" />
-        <br />
-        <label>kategori</label>
-        <select>
-          <option value="">-</option>
-          <option value="small">small</option>
-          <option value="medium">medium</option>
-          <option value="large">large</option>
-        </select>
-        <label>harga</label>
-        <select>
-          <option value="">-</option>
-          <option value="beverage">small</option>
-          <option value="main-dish">medium</option>
-          <option value="main-dish">large</option>
-        </select>
-        <label>status</label>
-        <select>
-          <option value="">-</option>
-          <option value="true">Disewakan</option>
-          <option value="false">Tersewa</option>
-        </select>
+      <div className="search-section mb-5">
+        <div className="search-section-input">
+          <label>Nama Mobil</label>
+          <input type="text" />
+        </div>
+        <div className="search-section-input">
+          <label>Kategori</label>
+          <select>
+            <option value="">-</option>
+            <option value="small">small</option>
+            <option value="medium">medium</option>
+            <option value="large">large</option>
+          </select>
+        </div>
+        <div className="search-section-input">
+          <label>Harga</label>
+          <select>
+            <option value="">-</option>
+            <option value="beverage">small</option>
+            <option value="main-dish">medium</option>
+            <option value="main-dish">large</option>
+          </select>
+        </div>
+        <div className="search-section-input">
+          <label>Status</label>
+          <select>
+            <option value="">-</option>
+            <option value="true">Disewakan</option>
+            <option value="false">Tersewa</option>
+          </select>
+        </div>
         {isSearch || hasDetail ? (
           <button onClick={handleReset}> Reset</button>
         ) : (
